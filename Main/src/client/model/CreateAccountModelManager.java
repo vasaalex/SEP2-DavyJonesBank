@@ -1,4 +1,6 @@
-package model;
+package client.model;
+
+import client.networking.Client;
 
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeSupport;

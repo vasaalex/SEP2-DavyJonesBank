@@ -1,12 +1,11 @@
 package client.model;
 
+import shared.Profile;
+import shared.User;
+
 public interface CreateAccountModel
 {
-  public void sendUsername(String username);
-  public void sendPassword(String password);
-  public void sendFName(String fName);
-  public void sendIName(String lName);
-  public void sendEmail(String email);
-  public void sendPhone(long phone);
+  String sendUser(User user);
+  String sendProfile(Profile profile);
 
 }

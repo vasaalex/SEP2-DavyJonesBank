@@ -1,6 +1,9 @@
 package client.model;
 
 import client.networking.Client;
+import client.networking.RMIClient;
+import shared.Profile;
+import shared.User;
 
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeSupport;
@@ -8,47 +11,28 @@ import java.beans.PropertyChangeSupport;
 public class CreateAccountModelManager implements CreateAccountModel
 {
 
-  private PropertyChangeSupport support = new PropertyChangeSupport(this);
+  private PropertyChangeSupport support;
   private Client client;
 
   public CreateAccountModelManager()
   {
     client.startClient();
-    client.addListener("Account Creation State", this::onNewAccountCreated);
+    client.addPropertyListener("Account Creation State", this::onNewAccountCreated);
   }
 
-  public void onNewAccountCreated(PropertyChangeEvent propertyChangeEvent){
-    support.fireIndexedPropertyChange(propertyChangeEvent);
-  }
-
-  @Override public void sendUsername(String username)
+  public void onNewAccountCreated(PropertyChangeEvent propertyChangeEvent)
   {
-    return client.sendUsername(username);
+    support.firePropertyChange(propertyChangeEvent);
   }
 
-  @Override public void sendPassword(String password)
+  @Override public String sendUser(User user)
   {
-    return client.sendPassword(password);
+    return client.sendUser(user);
   }
 
-  @Override public void sendFName(String fName)
+  @Override public String sendProfile(Profile profile)
   {
-    return client.sendFname(fName);
-  }
-
-  @Override public void sendIName(String lName)
-  {
-    return client.sendLName(lName);
-  }
-
-  @Override public void sendEmail(String email)
-  {
-    return client.sendEmail(email);
-  }
-
-  @Override public void sendPhone(long phone)
-  {
-    return client.sendPhone(phone);
+    return client.sendProfile(profile);
   }
 }
 

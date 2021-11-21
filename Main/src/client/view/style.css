@@ -1,0 +1,47 @@
+/*
+*
+*/
+
+.mainColumnButton {
+    -fx-background-color:
+       #EEEEEE;
+    -fx-background-radius: 0, 0;
+    -fx-background-insets: 0, 0;
+    -fx-text-fill: black;
+    -fx-border-width: 1 px;
+    -fx-border-bottom: 0 px;
+    -fx-border-color: black;
+}
+
+.topBar {
+-fx-background-color:
+       #222831;
+-fx-text-fill: white;
+}
+
+.labelWithShadow, #createUser .text-field {
+-fx-background-color:
+       #E4E4E4;
+-fx-effect: dropshadow(two-pass-box, #d5d5d5, 7, 0, 1, 3);
+-fx-border-width: 1 px;
+-fx-border-color: #8C8C8C;
+}
+
+#createUser  {
+-fx-font-size: 16;
+-fx-font-family: "Trebuchet MS";
+}
+
+#createUser  .text-field {
+-fx-padding: 2; }
+
+#createUser .button {
+-fx-text-fill: white;
+-fx-background-color: #056fcb;
+-fx-border-style: solid line-join bevel line-cap square #056fcb;
+-fx-min-height: 30;
+-fx-max-height: 30;
+-fx-min-width: 120;
+-fx-padding: 0;
+}
+

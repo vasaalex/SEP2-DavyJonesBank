@@ -1,6 +1,4 @@
-/*
- * dummy class, to be replaced by a later implementation
- */
+// dummy class, to be replaced by a later implementation
 
 package shared;
 

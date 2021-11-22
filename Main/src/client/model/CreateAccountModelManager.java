@@ -14,7 +14,7 @@ public class CreateAccountModelManager implements CreateAccountModel
   private PropertyChangeSupport support;
   private Client client;
 
-  public CreateAccountModelManager()
+  public CreateAccountModelManager(Client client)
   {
     client.startClient();
     client.addPropertyListener("Account Creation State", this::onNewAccountCreated);

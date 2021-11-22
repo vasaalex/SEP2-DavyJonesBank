@@ -1,3 +1,7 @@
+/*
+ * dummy class, to be replaced by a later implementation
+ */
+
 package shared;
 
 public class User
